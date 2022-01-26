@@ -172,13 +172,8 @@ class AlbumDetailFragment : Fragment() {
       currentList = album.tracks?.track!!
       adapter.submitList(album.tracks?.track)
     }
-    if (currentList.isEmpty()) {
-      binding.linearLayoutDetailTracks.visibility = View.GONE
-      binding.cardViewShowTracks.visibility = View.GONE
-    } else {
-      binding.linearLayoutDetailTracks.visibility = View.VISIBLE
-      binding.cardViewShowTracks.visibility = View.VISIBLE
-    }
+    binding.linearLayoutDetailTracks.visibility = if (currentList.isEmpty()) View.GONE else View.VISIBLE
+    binding.cardViewShowTracks.visibility = if (currentList.isEmpty()) View.GONE else View.VISIBLE
 
     currentAlbum = album
 
@@ -192,13 +187,10 @@ class AlbumDetailFragment : Fragment() {
       )
     }
 
-    if (description.isNullOrEmpty()) {
-      binding.textViewAlbumDescription.visibility = View.GONE
-      binding.textView.visibility = View.GONE
-    } else {
-      binding.textViewAlbumDescription.visibility = View.VISIBLE
-      binding.textView.visibility = View.VISIBLE
+    binding.textViewAlbumDescription.visibility = if (description.isNullOrEmpty()) View.GONE else View.VISIBLE
+    binding.textView.visibility = if (description.isNullOrEmpty()) View.GONE else {
       binding.textViewAlbumDescription.text = description
+      View.VISIBLE
     }
 
     setFavoriteImage(album.isFavorite)
