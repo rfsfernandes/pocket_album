@@ -1,0 +1,15 @@
+<resources>
+  <string name="app_name">PocketAlbum</string>
+  <string name="album_by">By: %s</string>
+  <string name="played_times">Played %s times</string>
+  <string name="image_of_the_album">Image of the album</string>
+  <string name="search_for_your_favourite_artists">Search for your favourite artists!</string>
+  <string name="album_tracks">Album tracks:</string>
+  <string name="description">Description:</string>
+  <string name="no_results_found">No results found</string>
+  <string name="no_internet_connection">No internet connection.</string>
+  <string name="couldnt_update">Couldn\'t update because the app lost connection</string>
+  <string name="album_save_success">Album saved successfully!</string>
+  <string name="album_save_fail">Something went wrong and this action couldn\'t be completed.</string>
+  <string name="album_delete_success">Album deleted successfully!</string>
+</resources>
